@@ -1,4 +1,3 @@
-
 package com.santhosh.zoho_practice;
 
 public class pattern_printer {
@@ -31,15 +30,54 @@ public class pattern_printer {
         }
     }
 
-    public static void main(String[] args) {
+
+    private static void soultion2UsingLoops(String input) {
+        int startingIndex = input.length()/2;
+        int spaces = input.length()-1;
+        int endingIndex = input.length();
         
-        String input = "WATER";
+       while(spaces!=-1){
+            int loopCount = 0, index = startingIndex;
+            for(int j=0; j<spaces; j++){
+                System.out.print(" ");
+                loopCount++;
+            }
+            spaces--;
 
 
-        soultionUsingStringBuilder(input);
+            while(loopCount<input.length() && index<input.length()){
+                System.out.print(input.charAt(index));
+                index++;
+                loopCount++;
+            }
+            
 
+            index = 0;
+            while(loopCount!=input.length()){
+                System.out.print(input.charAt(index));
+                index++;
+                loopCount++;
+            }
+            System.out.println("");
+            
+
+        }
     }
 
     
     
+    public static void main(String[] args) {
+        
+        String input = "WELCOME";
+
+
+        soultionUsingStringBuilder(input);
+
+        soultion2UsingLoops(input);
+
+
+
+    }
+
+  
 }
