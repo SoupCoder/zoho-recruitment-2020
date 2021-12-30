@@ -1,1 +1,45 @@
 
+package com.santhosh.zoho_practice;
+
+public class pattern_printer {
+
+    private static void soultionUsingStringBuilder(String input) {
+        int mid = input.length()/2;
+
+        int spaces = input.length()-1;
+
+        int checker = input.length();
+
+        StringBuilder sb = new StringBuilder("");
+
+        for(int i=mid; i<input.length(); i++){
+            for(int j=0; j<spaces; j++){
+                System.out.print(" ");
+            }
+            spaces--;
+            sb.append(input.charAt(i));
+            System.out.println(sb.toString());
+        }
+
+        for(int i=0; i<mid; i++){
+            for(int j=0; j<spaces; j++){
+                System.out.print(" ");
+            }
+            spaces--;
+            sb.append(input.charAt(i));
+            System.out.println(sb.toString());
+        }
+    }
+
+    public static void main(String[] args) {
+        
+        String input = "WATER";
+
+
+        soultionUsingStringBuilder(input);
+
+    }
+
+    
+    
+}
